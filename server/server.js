@@ -4,7 +4,7 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 app.use(function (req, res, next) {
-  res.setHeader("Access-Control-Allow-Origin", "http://localhost:5173");
+  res.setHeader("Access-Control-Allow-Origin", process.env.CLIENT_URL);
 
   res.setHeader(
     "Access-Control-Allow-Methods",
@@ -23,7 +23,7 @@ app.use(function (req, res, next) {
 app.use(express.json());
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: process.env.CLIENT_URL,
   })
 );
 
