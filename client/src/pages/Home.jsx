@@ -2,7 +2,7 @@ import React from "react";
 
 const Home = () => {
   const paymentHandle = () => {
-    fetch("http://localhost:3000/create-checkout-session", {
+    fetch("https://paynet-api.onrender.com/create-checkout-session", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
